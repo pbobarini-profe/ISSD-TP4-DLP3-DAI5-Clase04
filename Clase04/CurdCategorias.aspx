@@ -14,9 +14,14 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar" />
             <br />
             <asp:Label ID="Label1" runat="server"></asp:Label>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idCategoria" DataSourceID="SqlDataSource1">
+            <br />
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:Button ID="Button2" runat="server" Text="Filtrar" />
+            <asp:Button ID="Button3" runat="server" Text="Desfiltrar" />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idCategoria" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ButtonType="Button" DeleteText="Borrar" ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="idCategoria" HeaderText="idCategoria" InsertVisible="False" ReadOnly="True" SortExpression="idCategoria" />
                     <asp:BoundField DataField="nombreCategoria" HeaderText="nombreCategoria" SortExpression="nombreCategoria" />
                 </Columns>
