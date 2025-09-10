@@ -24,5 +24,21 @@ namespace Clase04
                 GridView1.DataBind();
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.FilterExpression = "idCategoria >= '" + TextBox2.Text + "' and idCategoria <='"+TextBox3.Text+"'";
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.FilterExpression = string.Empty;
+            SqlDataSource1.FilterParameters.Clear();
+        }
     }
 }

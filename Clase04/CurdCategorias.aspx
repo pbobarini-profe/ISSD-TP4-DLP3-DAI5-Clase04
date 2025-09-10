@@ -17,8 +17,8 @@
             <br />
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" Text="Filtrar" />
-            <asp:Button ID="Button3" runat="server" Text="Desfiltrar" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Filtrar" />
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Desfiltrar" />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="idCategoria" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ButtonType="Button" DeleteText="Borrar" ShowDeleteButton="True" ShowEditButton="True" />
