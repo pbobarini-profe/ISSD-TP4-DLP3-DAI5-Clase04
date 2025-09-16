@@ -29,7 +29,7 @@
             <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Desfiltrar" />
             <asp:GridView ID="GridView1"
                 EmptyDataText="No hay registros"
-                CssClass="table" runat="server" AutoGenerateColumns="False" 
+                 runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="id" DataSourceID="SqlDataSourceProductos" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
                 OnRowDataBound="GridView1_RowDataBound">
                 <Columns>

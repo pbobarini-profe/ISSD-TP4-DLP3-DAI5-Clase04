@@ -41,6 +41,7 @@ namespace Clase04
             TextBox2.Text = precio;
             DropDownList1.SelectedValue = idCategoria;
             Label2.Text = id;
+            GridView1.DataBind();
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -79,10 +80,11 @@ namespace Clase04
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow) { 
-                if(e.Row.RowIndex == GridView1.SelectedIndex)
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.RowIndex == GridView1.SelectedIndex)
                 {
-                    e.Row.BackColor = System.Drawing.Color.AliceBlue;
+                    e.Row.Attributes["style"] = "background-color:black !important; color:white !important;";
                 }
             }
         }
